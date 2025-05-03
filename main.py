@@ -11,6 +11,7 @@ def main():
 
 def get_word_count():
     num_words = get_book_text("books/frankenstein.txt").split
+
     return num_words
 
 
