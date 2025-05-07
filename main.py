@@ -16,10 +16,9 @@ def get_word_count():
     for i in range(0, len(num_words)):
         if i > max_words:
             word_count = i + 1
-            print(f"{word_count} words found in the document")
-        else:
-            print("ERROR")
+            # print(f"{word_count} words found in the document")
+    return f"{word_count} words found in the document"
 
 
 main()
-get_word_count()
+print(get_word_count())
