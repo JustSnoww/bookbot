@@ -6,3 +6,7 @@ def get_word_count(filepath):
         if i > max_words:
             word_count = i + 1
     return f"{word_count} words found in the document"
+
+
+def get_character_count(filepath):
+    pass
