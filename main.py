@@ -10,9 +10,16 @@ def main():
 
 
 def get_word_count():
-    num_words = get_book_text("books/frankenstein.txt").split
-
-    return num_words
+    num_words = get_book_text("books/frankenstein.txt").split()
+    max_words = float("-inf")
+    word_count = 0
+    for i in range(0, len(num_words)):
+        if i > max_words:
+            word_count = i + 1
+            print(f"{word_count} words found in the document")
+        else:
+            print("ERROR")
 
 
 main()
+get_word_count()
