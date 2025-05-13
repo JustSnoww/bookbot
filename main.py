@@ -1,7 +1,14 @@
 from stats import get_word_count
 from stats import get_character_count
 
-path = "books/frankenstein.txt"
+
+def main():
+    path = "books/frankenstein.txt"
+    text = get_book_text(path)
+    num_words = get_word_count(text)
+    char_dict = get_character_count(text)
+    print(f"{num_words} words found in the document")
+    print(char_dict)
 
 
 def get_book_text(filepath):
@@ -10,11 +17,4 @@ def get_book_text(filepath):
     return file_contents
 
 
-def main():
-    book_text = get_book_text("books/frankenstein.txt")
-    print(book_text)
-
-
 main()
-print(get_word_count(get_book_text(path)))
-print(get_character_count(get_book_text(path)))
