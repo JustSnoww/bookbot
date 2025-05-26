@@ -5,7 +5,7 @@ def get_word_count(text):
     for i in range(0, len(num_words)):
         if i > max_words:
             word_count = i + 1
-    return f"{word_count} words found in the document"
+    return word_count
 
 
 def get_character_count(text):
@@ -20,4 +20,15 @@ def get_character_count(text):
 
 
 def sort_dict(dict):
-    return dict
+    char_list = []
+    for key in dict:
+        value = dict[key]
+        if key.isalpha():
+            count_dict = {"char": key, "num": value}
+            char_list.append(count_dict)
+    char_list.sort(reverse=True, key=sort_on)
+    return char_list
+
+
+def sort_on(dict_item):
+    return dict_item["num"]

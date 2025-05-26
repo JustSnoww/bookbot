@@ -9,8 +9,17 @@ def main():
     num_words = get_word_count(text)
     char_dict = get_character_count(text)
     sort = sort_dict(char_dict)
-    print(f"{num_words} words found in the document")
-    print(sort)
+    print("============ BOOKBOT ============")
+    print("Analyzing book found at books/frankenstein.txt...")
+    print("----------- Word Count -----------")
+    print(f"Found {num_words} total words")
+    print("--------- Character Count ---------")
+    for items in sort:
+        characters = items["char"]
+        number = items["num"]
+        print(f"{characters}: {number}")
+
+    print("============= END ===============")
 
 
 def get_book_text(filepath):
