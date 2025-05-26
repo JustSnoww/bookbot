@@ -20,4 +20,4 @@ def get_character_count(text):
 
 
 def sort_dict(dict):
-    pass
+    return dict
